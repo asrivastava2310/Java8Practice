@@ -22,11 +22,11 @@ public class BiFunctionExample {
 		return namesAndRating;
 	};
 
-	private static Predicate<Employee> employeePredicate = (employee)->employee.getRating() == 3;
-	
+	private static Predicate<Employee> employeePredicate = (employee) -> employee.getRating() == 3;
+
 	public static void main(String[] args) {
-       List<Employee> employees = EmployeeLocalDB.getAllEmployees();
-       System.out.println(highestRatedEmployees.apply(employees, employeePredicate));
+		List<Employee> employees = EmployeeLocalDB.getAllEmployees();
+		System.out.println(highestRatedEmployees.apply(employees, employeePredicate));
 	}
 
 }
