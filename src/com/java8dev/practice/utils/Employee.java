@@ -8,6 +8,12 @@ public class Employee {
 	private String geneder;
 	private List<String> certificates;
 
+	public Employee() {
+	}
+	
+	public Employee(String name) {
+		this.name = name;
+	}
 	public Employee(String name, int rating, String geneder, List<String> certificates) {
 		this.name = name;
 		this.rating = rating;
@@ -47,6 +53,9 @@ public class Employee {
 		this.certificates = certificates;
 	}
 
+	public void printCertificates() {
+		System.out.println(this.getCertificates());
+	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
